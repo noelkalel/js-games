@@ -1,0 +1,172 @@
+.bgd-img {
+    background: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* TIMER */
+.start-timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    border: 2px solid black;
+    background: black;
+    width: 0.5rem;
+    height: 8rem;
+    margin: 10px;
+}
+
+.full-timer {
+    width: 100%;
+    background: #ffcc4d;
+}
+
+.start-timer {
+    width: 3rem;
+    height: 3rem;
+    padding: 10px;
+    background: black;
+    color: #ffcc4d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.score {
+    width: 3rem;
+    height: 3rem;
+    padding: 10px;
+    background: #1149d3;
+    color: #4deaff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+/* WORDS */
+.word {
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    font-size: 3vh;
+    background: #011f68;
+    color: white;
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.info {
+    font-family: 'Inter';
+    color: #ffffff;
+}
+
+.my-word-wrapper,
+.solution {
+    position: relative;
+    height: 4rem;
+    background: #011f68;
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+}
+
+.my-word-wrapper div,
+.solution div {
+    font-size: 2rem; 
+    font-family: 'Inter';
+}
+
+#correct {
+    position: absolute;
+    left: 1rem;
+    display: none;
+    color: green; 
+}
+ 
+#incorrect {
+    position: absolute;
+    left: 1rem;
+    display: none;
+    color: rgb(153, 0, 0);
+}
+
+/*#delete {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    color: white;
+    cursor: pointer;
+}*/
+
+.disabled {
+    background: #283b6d;
+}
+
+#timeup[disabled="true"],
+#score[disabled="true"]{
+    cursor: not-allowed;
+}
+
+.buttons button {
+    padding: 1rem;
+    font-size: 1rem; 
+    font-family: 'Inter';
+    text-align: center;
+    color: white;
+    border: 0;
+    border-radius: 1rem;
+    background: #003a61;    
+    cursor: pointer;
+    border: 1px solid #ffffff;
+}
+
+#score,
+#check, 
+#confirm, 
+#newgame,
+#timeup { 
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .start-timer-wrapper {
+        flex-direction: row;
+    }
+
+    .timer {
+        width: 8rem;
+        height: 0.5rem;
+    }
+
+    .full-timer {
+        height: 100%;
+        width: 0%;
+    }
+
+    .my-word-wrapper,
+    .solution {
+        height: 3rem;
+    }
+
+    .buttons button {
+        padding: 0.75rem;
+    }
+}

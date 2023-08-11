@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <meta name="description" content="RPS" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/src/style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="panel-heading text-center">
+                    <h3>
+                        Rock Paper Scissors
+                    </h3>
+                </div>
+
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img 
+                            role="button"
+                            class="img-fluid border p-2 transition img-size"
+                            alt="rock"
+                            src="assets/images/rock.jpg" 
+                            onclick="playerChoose('ROCK')">
+
+                        <img 
+                            role="button"
+                            class="img-fluid border p-2 mx-3 transition img-size"
+                            alt="photo" 
+                            src="assets/images/paper.jpg" 
+                            onclick="playerChoose('PAPER')">
+
+                        <img 
+                            role="button"
+                            class="img-fluid border p-2 transition img-size" 
+                            alt="photo" 
+                            src="assets/images/scissors.jpg" 
+                            onclick="playerChoose('SCISSORS')">
+                        <hr>
+
+                        <div class="mb-2">
+                            <b>Current Game Status:</b> <br>
+
+                            <span id="result" class="resultColor" emoji="emoji">No games played yet!</span>
+                        </div>
+                        <div class="mb-2">
+                            You threw: <br> 
+
+                            <span id="playerChoice">N/A</span>
+                        </div>
+                        <div class="mb-2">
+                            Computer threw: <br>
+
+                            <span id="computerChoice">N/A</span>
+                        </div>
+                        <div class="mb-2">
+                            Total Throws: <br>
+
+                            <span id="throwCount">0</span>
+                        </div>
+
+                        <div class="d-flex flex-wrap justify-content-center mb-2 gap-4">
+                            <div class="mb-2">
+                                Wins: <br>
+
+                                <span id="wins">0</span>
+                            </div>
+                            <div class="mb-2">
+                                Losses: <br>
+
+                                <span id="losses">0</span>
+                            </div>
+                            <div class="mb-2">
+                                Draws: <br>
+
+                                <span id="draws">0</span>
+                            </div>
+                        </div>
+
+                        <button class="reset-game" onclick="resetScore()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/src/script.js"></script>
+</body>
+</html>
